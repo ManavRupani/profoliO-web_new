@@ -216,6 +216,7 @@ img {
     left: 0;
     background-color: hsla(0,0%,0%,0.75);
     width: 100%;
+    padding:1.8rem 5rem;
     text-align: center;
     backdrop-filter: blur(8px);
     transition: top .4;
@@ -233,6 +234,41 @@ img {
   font-size:var(--smaller-font-size);
   font-weight: var(--font-semi-bold);
   margin-bottom: 3.5rem;
+}
+.nav__name{
+  position: relative;
+  width: max-content;
+  margin: 0 auto 3rem;
+  font-size: var(--h2-font-size);
+
+}
+
+.nav__name::after,
+.nav__name::before{
+  content:'';
+  width: 40px;
+  height: 1px;
+  background-color: var(--text-color-light);
+  position: absolute;
+  top:50%;
+  left: -4rem;
+}
+.nav__name::before{
+  left:initial;
+  right:-4rem;
+}
+
+.nav__list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+.nav__link{
+  position: relative;
+  color: var(--text-color-light);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  transition: color .3s;
 }
 /* Navigation for mobile devices */
 
